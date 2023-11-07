@@ -82,7 +82,7 @@ document.querySelector("#gen-first-session-notes").onclick = function() {
     let frsFindingsField = document.querySelector("#frs-findings-field").value;
     const formattedFindings = formatText(frsFindingsField);
 
-    const outputString = `❰❰ 𝗥𝗘𝗠𝗢𝗧𝗘 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗡𝗢𝗧𝗘𝗦 ❱❱
+    const outputString = `# REMOTE SESSION NOTES #
 
 ╔═════════╗
 ║SR NUMBER
@@ -142,7 +142,7 @@ document.querySelector("#gen-followup-session-notes").onclick = function() {
     let foFindingsField = document.querySelector("#fo-findings-field").value;
     const formattedFindings = formatText(foFindingsField);    
 
-    const outputString = `❰❰ 𝗥𝗘𝗠𝗢𝗧𝗘 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗡𝗢𝗧𝗘𝗦 ❱❱    
+    const outputString = `# REMOTE SESSION NOTES # 
 
 ╔═════════╗
 ║SR NUMBER
@@ -183,7 +183,7 @@ document.querySelector("#gen-escalation-notes").onclick = function() {
     let escFindingsField = document.querySelector("#esc-findings-field").value;
     const formattedFindings = formatText(escFindingsField);
 
-    const outputString = `❰❰ 𝗘𝗦𝗖𝗔𝗟𝗔𝗧𝗜𝗢𝗡 𝗡𝗢𝗧𝗘𝗦 ❱❱ 
+    const outputString = `# ESCALATION NOTES #
 
 ╔═════════╗
 ║SR NUMBER
