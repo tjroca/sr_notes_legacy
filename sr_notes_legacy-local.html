@@ -1,0 +1,708 @@
+<!-- 
+
+    Greetings
+    To get the local copy, save this entire raw content to an HTML file 
+
+        For Chrome & Edge:
+            Right click in the page and click "Save as"
+        
+        For Firefox:
+            Right click in the page and click "Save page as"
+
+        Then save with file type extension `.html`
+    
+    To use the local version, just double-click the local HTML file
+    For any issues or questions, please reach out to the author, or submit an issue on GitHub
+
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <!-- <link rel="icon" type="image/x-icon" href="./favicon_white.png"> -->
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <!-- <link rel="stylesheet" href="darkmode.css"> -->
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Gudea:wght@400;700&family=Inter&display=swap');
+
+
+    * {
+      box-sizing: border-box;
+      /* overflow: auto; */
+      margin: 0;
+      padding: 0;
+      font-family: 'Inter', sans-serif;
+    }
+
+
+    .feedback {
+      position: absolute;
+      top: 40px;
+      left: 45px;
+    }
+
+    .feedback:hover {
+      cursor: pointer;
+    }
+
+    .download {
+      position: absolute;
+      top: 40px;
+      left: 90px;
+    }
+
+    .download:hover {
+      cursor: pointer;
+    }
+
+    .dark-mode-toggle {
+      position: absolute;
+      top: 40px;
+      right: 45px;
+    }
+
+    .dark-mode-toggle:hover {
+      cursor: pointer;
+    }
+
+    .material-symbols-outlined {
+      color: #010101;
+    }
+
+
+    .nav {
+      text-align: center;
+    }
+
+    .btn {
+      margin: 30px 8px;
+      width: 190px;
+      height: 35px;
+      border: 2px solid transparent;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .generate-btn {
+      margin: 30px 10px;
+      float: right;
+    }
+
+    .dark-btn {
+      background-color: #D9D9D9;
+    }
+
+    .btn:hover {
+      background-color: rgba(213, 26, 94, 0.2);
+      transition: all 0.2s ease-in-out;
+      cursor: pointer;
+    }
+
+    .main-section {
+      /* margin: 0 115px; */
+      margin: 0 auto;
+      overflow: auto;
+      width: 90%;
+      max-width: 2000px;
+    }
+
+    .section {
+      /* width: 800px; */
+      width: 49%;
+      background-color: #cccccc;
+      padding: 10px 100px;
+      overflow: hidden;
+      display: inline-block;
+      height: 95vh;
+    }
+
+    .input-section {
+      float: left;
+      /* overflow: auto; */
+    }
+
+    .output-section {
+      float: right;
+      text-align: center;
+    }
+
+    .section-header {
+      font-size: 20px;
+      font-weight: 400;
+      text-align: center;
+      margin: 10px 0;
+      margin-bottom: 20px;
+    }
+
+    .field-container {
+      margin: 15px 0;
+    }
+
+    .textarea-container label {
+      margin-bottom: 10px;
+      overflow: auto;
+    }
+
+    label {
+      font-size: 14px;
+      font-weight: 400;
+      width: 30%;
+    }
+
+    input {
+      float: right;
+      width: 360px;
+      height: 24px;
+      padding: 0 5px;
+      border: none;
+    }
+
+    input:focus {
+      outline: none;
+    }
+
+    textarea {
+      border: none;
+      width: 50%;
+      max-width: 100%;
+      min-width: 100%;
+      padding: 5px;
+    }
+
+    textarea:focus {
+      outline: none;
+    }
+
+    .inline-ta {
+      width: 360px;
+      min-width: 360px;
+      max-width: 360px;
+      float: right;
+      background-color: white;
+    }
+
+    .output-ta {
+      margin-bottom: 20px;
+    }
+
+    .sub1 {
+      overflow: auto;
+    }
+
+    .sub2 {
+      margin: 20px 0;
+    }
+
+    .sub2 label {
+      display: block;
+    }
+
+    .sub3 {
+      overflow: auto;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media only screen and (max-width: 1645px) {
+      .section {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+      }
+    }
+
+    /* Dark mode - remove this for light mode */
+    /* 
+body color: #181a1b
+section color: #202324
+input/textarea color: #3b3b3b
+light button color: #6b6b6b
+dark button color: #2d3133
+letter color: #f0f0f0
+*/
+
+    .material-symbols-outlined {
+      color: #f0f0f0 !important;
+    }
+
+    label {
+      color: #f0f0f0 !important;
+    }
+
+    body {
+      background: #181a1b !important;
+    }
+
+    h3 {
+      color: #f0f0f0;
+    }
+
+    .btn {
+      color: #f0f0f0;
+      background-color: #6b6b6b !important;
+    }
+
+    .btn:hover {
+      background-color: #bd006e !important;
+    }
+
+    .btn:active {
+      color: #000000;
+      border: 1px solid #f0f0f0;
+    }
+
+    .generate-btn,
+    .dark-btn {
+      background-color: #2d3133 !important;
+    }
+
+    input,
+    textarea {
+      background-color: #3b3b3b !important;
+      color: #f0f0f0;
+    }
+
+    .section {
+      background-color: #202324;
+    }
+
+    /* End dark mode code */
+  </style>
+  <title>SR Notes</title>
+
+</head>
+
+<body>
+  <!-- feedback -->
+  <div class="feedback" title="Submit feedback">
+    <a href="https://github.com/tjroca/sr_notes/issues" target="_blank"><span class="material-symbols-outlined">speaker_notes</span></a>
+  </div>
+  <!-- dark mode toggle -->
+  <div class="dark-mode-toggle" title="Dark mode toggle only supported in Web version">
+    <span class="material-symbols-outlined">dark_mode</span>
+  </div>
+
+  <div class="nav">
+    <button class="btn" id="first-session-btn">First Session</button>
+    <button class="btn" id="followup-session-btn">Follow up Session</button>
+    <button class="btn" id="escalation-template-btn">Escalation Template</button>
+  </div>
+
+  <div class="main-section">
+
+    <!-- input section -->
+    <!--  -->
+    <div id="input-section" class="input-section first-session-section section">
+
+      <!-- First session section -->
+      <div id="first-session-sub-container" class="input-section-sub-container sub1">
+        <h3 class="input-header section-header">First Remote Session</h3>
+        <div class="sub1">
+          <div class="field-container">
+            <label>SR Number</label>
+            <input id="frs-sr-number-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Customer Name</label>
+            <input id="frs-customer-name-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Contact Number</label>
+            <input id="frs-contact-number-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Business Impact</label>
+            <input id="frs-business-impact-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Environment & Version</label>
+            <textarea id="frs-environment-field" class="inline-ta" rows="2" required></textarea>
+          </div>
+        </div>
+        <div class="sub2">
+          <div class="field-container textarea-container">
+            <label class="summaryofissue-ta">Summary of Issue</label>
+            <textarea id="frs-issue-summary-field" rows="5" required></textarea>
+          </div>
+          <div class="field-container textarea-container">
+            <label class="findings-ta">Findings</label>
+            <textarea id="frs-findings-field" rows="14" required></textarea>
+          </div>
+        </div>
+        <div class="sub3">
+          <div class="field-container">
+            <label>Files & Location</label>
+            <input id="frs-files-location-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Next Steps</label>
+            <textarea id="frs-next-steps-field" class="inline-ta" required></textarea>
+          </div>
+        </div>
+        <button id="gen-first-session-notes" class="btn generate-btn dark-btn">Generate Notes</button>
+        <button id="frs-gen-email" class="btn generate-btn dark-btn gen-email">Generate Email</button>
+      </div>
+
+      <!-- Follow up session section-->
+      <div id="followup-session-sub-container" class="input-section-sub-container hidden">
+        <h3 class="input-header section-header">Follow up Session</h3>
+
+        <div class="sub1">
+          <div class="field-container">
+            <label>SR Number</label>
+            <input id="fo-sr-number-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Customer Name</label>
+            <input id="fo-customer-name-field" type="text" required>
+          </div>
+        </div>
+
+        <div class="sub2">
+          <div class="field-container textarea-container">
+            <label class="summaryofissue-ta">Summary of Issue</label>
+            <textarea id="fo-issue-summary-field" rows="5" required></textarea>
+          </div>
+          <div class="field-container textarea-container">
+            <label class="findings-ta">Findings</label>
+            <textarea id="fo-findings-field" rows="14" required></textarea>
+          </div>
+        </div>
+
+        <div class="sub3">
+          <div class="field-container">
+            <label>Files & Location</label>
+            <input id="fo-files-location-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Next Steps</label>
+            <textarea id="fo-next-steps-field" class="inline-ta" required></textarea>
+          </div>
+        </div>
+        <button id="gen-followup-session-notes" class="btn generate-btn dark-btn">Generate Notes</button>
+        <button id="fo-gen-email" class="btn generate-btn dark-btn gen-email">Generate Email</button>
+      </div>
+
+
+      <!-- Escalation template section -->
+      <div id="escalation-template-sub-container" class="input-section-sub-container hidden">
+        <h3 class="input-header section-header">Escalation Template</h3>
+        <div class="sub1">
+          <div class="field-container">
+            <label>SR Number</label>
+            <input id="sr-number-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Customer Name</label>
+            <input id="customer-name-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Business Impact</label>
+            <input id="business-impact-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Environment & Version</label>
+            <textarea id="environment-field" class="inline-ta" required></textarea>
+          </div>
+        </div>
+        <div class="sub2">
+          <div class="field-container textarea-container">
+            <label class="summaryofissue-ta">Summary of Issue</label>
+            <textarea id="esc-issue-summary-field" rows="5" required></textarea>
+          </div>
+          <div class="field-container textarea-container">
+            <label class="findings-ta">Findings</label>
+            <textarea id="esc-findings-field" rows="14" required></textarea>
+          </div>
+        </div>
+        <div class="sub3">
+          <div class="field-container">
+            <label>Files & Location</label>
+            <input id="files-location-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Lab Replication</label>
+            <textarea id="lab-replication-field" class="inline-ta" rows="1" required></textarea>
+          </div>
+        </div>
+        <button id="gen-escalation-notes" class="btn generate-btn dark-btn">Generate Notes</button>
+      </div>
+
+
+    </div>
+
+
+
+    <!-- output section -->
+    <div class="output-section section">
+      <h3 class="output-header section-header">Output</h3>
+      <textarea id="output-field" class="output-ta" rows="40" readonly></textarea>
+      <button id="copy-btn" class="btn dark-btn" onclick="copyToClipboard()">Copy to Clipboard</button>
+    </div>
+
+  </div>
+
+
+
+
+  <script src="script.js"></script>
+  <!-- <script src="darkmode.js"></script> -->
+
+
+  <script>
+    // window.onload = function() {
+
+    // Show first session template
+    document.querySelector("#first-session-btn").onclick = function() {
+      document.querySelector("#first-session-sub-container").classList.remove("hidden");
+      document.querySelector("#followup-session-sub-container").classList.add("hidden");
+      document.querySelector("#escalation-template-sub-container").classList.add("hidden");
+    }
+
+    // Show follow up session template
+    document.querySelector("#followup-session-btn").onclick = function() {
+      document.querySelector("#first-session-sub-container").classList.add("hidden");
+      document.querySelector("#followup-session-sub-container").classList.remove("hidden");
+      document.querySelector("#escalation-template-sub-container").classList.add("hidden");
+    }
+
+    // Show escalation template
+    document.querySelector("#escalation-template-btn").onclick = function() {
+      document.querySelector("#first-session-sub-container").classList.add("hidden");
+      document.querySelector("#followup-session-sub-container").classList.add("hidden");
+      document.querySelector("#escalation-template-sub-container").classList.remove("hidden");
+    }
+
+    // Dark mode toggle
+    document.querySelector(".dark-mode-toggle").onclick = function() {
+      let darkDisabled = document.getElementsByTagName('link')[3].disabled
+      if (darkDisabled) {
+        document.getElementsByTagName('link')[3].disabled = false;
+      } else if (!darkDisabled) {
+        document.getElementsByTagName('link')[3].disabled = true;
+      } else {
+        console.log("Error toggling dark mode");
+      }
+    }
+
+    // }
+
+
+
+    // First remote session Email
+    document.querySelector("#frs-gen-email").onclick = function() {
+      const outputField = document.querySelector("#output-field");
+      let findings = document.querySelector("#frs-findings-field").value;
+      const formattedFindings = formatText(findings);
+      const outputString = `Hello, {{{Recipient.FirstName}}},\n\nThank you for your time on the remote session today. Below is a summary of that session as well as the next steps for this case. If you have any questions or you discover any new information, please let us know. Thank you again for your time and for choosing Check Point as your security partner.\n\nFindings\n════════\n${formattedFindings}\n\nNext Steps\n══════════\n${document.querySelector("#frs-next-steps-field").value}`;
+      outputField.value = outputString;
+    }
+
+    // Follow up session Email
+    document.querySelector("#fo-gen-email").onclick = function() {
+      const outputField = document.querySelector("#output-field");
+      let findings = document.querySelector("#fo-findings-field").value;
+      const formattedFindings = formatText(findings);
+      const outputString = `Hello, {{{Recipient.FirstName}}},\n\nThank you for your time on the remote session today. Below is a summary of that session as well as the next steps for this case. If you have any questions or you discover any new information, please let us know. Thank you again for your time and for choosing Check Point as your security partner.\n\nFindings\n════════\n${formattedFindings}\n\nNext Steps\n══════════\n${document.querySelector("#fo-next-steps-field").value}`;
+      outputField.value = outputString;
+    }
+
+
+    let HEADER_START = "❰❰";
+    let HEADER_END = "❱❱";
+
+
+    document.querySelector("#gen-first-session-notes").onclick = function() {
+      const outputField = document.querySelector("#output-field");
+      let frsIssueSummaryField = document.querySelector("#frs-issue-summary-field").value;
+      const formattedIssueSummary = formatText(frsIssueSummaryField);
+      let frsFindingsField = document.querySelector("#frs-findings-field").value;
+      const formattedFindings = formatText(frsFindingsField);
+
+      const outputString = `❰❰ 𝗥𝗘𝗠𝗢𝗧𝗘 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗡𝗢𝗧𝗘𝗦 ❱❱
+
+╔═════════╗
+║SR NUMBER
+╚═════════╝
+${document.querySelector("#frs-sr-number-field").value}
+
+╔═════════════╗
+║CUSTOMER NAME
+╚═════════════╝
+${document.querySelector("#frs-customer-name-field").value}
+
+╔══════════════╗
+║CONTACT NUMBER
+╚══════════════╝
+${document.querySelector("#frs-contact-number-field").value}
+
+╔═════════════════════╗
+║ENVIRONMENT & VERSION
+╚═════════════════════╝
+${document.querySelector("#frs-environment-field").value}
+
+╔═══════════════╗
+║BUSINESS IMPACT
+╚═══════════════╝
+${document.querySelector("#frs-business-impact-field").value}
+
+╔════════════════╗
+║SUMMARY OF ISSUE
+╚════════════════╝
+${formattedIssueSummary}
+╔════════╗
+║FINDINGS
+╚════════╝
+${formattedFindings}
+╔════════════════╗
+║FILES & LOCATION
+╚════════════════╝
+${document.querySelector("#frs-files-location-field").value}
+
+╔══════════╗
+║NEXT STEPS
+╚══════════╝
+${document.querySelector("#frs-next-steps-field").value}
+`;
+
+
+      outputField.value = outputString;
+    }
+
+
+
+
+    document.querySelector("#gen-followup-session-notes").onclick = function() {
+      const outputField = document.querySelector("#output-field");
+      let issueSummaryField = document.querySelector("#fo-issue-summary-field").value;
+      const formattedIssueSummary = formatText(issueSummaryField);
+      let foFindingsField = document.querySelector("#fo-findings-field").value;
+      const formattedFindings = formatText(foFindingsField);
+
+      const outputString = `❰❰ 𝗥𝗘𝗠𝗢𝗧𝗘 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗡𝗢𝗧𝗘𝗦 ❱❱    
+
+╔═════════╗
+║SR NUMBER
+╚═════════╝
+${document.querySelector("#fo-sr-number-field").value}
+
+╔═════════════╗
+║CUSTOMER NAME
+╚═════════════╝
+${document.querySelector("#fo-customer-name-field").value}
+
+╔════════════════╗
+║SUMMARY OF ISSUE
+╚════════════════╝
+${formattedIssueSummary}
+╔════════╗
+║FINDINGS
+╚════════╝
+${formattedFindings}
+╔════════════════╗
+║FILES & LOCATION
+╚════════════════╝
+${document.querySelector("#fo-files-location-field").value}
+
+╔══════════╗
+║NEXT STEPS
+╚══════════╝
+${document.querySelector("#fo-next-steps-field").value}`;
+
+      outputField.value = outputString;
+    }
+
+
+    document.querySelector("#gen-escalation-notes").onclick = function() {
+      const outputField = document.querySelector("#output-field");
+      let escIssueSummaryField = document.querySelector("#esc-issue-summary-field").value;
+      const formattedIssueSummary = formatText(escIssueSummaryField);
+      let escFindingsField = document.querySelector("#esc-findings-field").value;
+      const formattedFindings = formatText(escFindingsField);
+
+      const outputString = `❰❰ 𝗘𝗦𝗖𝗔𝗟𝗔𝗧𝗜𝗢𝗡 𝗡𝗢𝗧𝗘𝗦 ❱❱ 
+
+╔═════════╗
+║SR NUMBER
+╚═════════╝
+${document.querySelector("#sr-number-field").value}
+
+╔═════════════╗
+║CUSTOMER NAME
+╚═════════════╝
+${document.querySelector("#customer-name-field").value}
+
+╔═════════════════════╗
+║ENVIRONMENT & VERSION
+╚═════════════════════╝
+${document.querySelector("#environment-field").value}
+
+╔═══════════════╗
+║BUSINESS IMPACT
+╚═══════════════╝
+${document.querySelector("#business-impact-field").value}
+
+╔════════════════╗
+║SUMMARY OF ISSUE
+╚════════════════╝
+${formattedIssueSummary}
+╔════════╗
+║FINDINGS
+╚════════╝
+${formattedFindings}
+╔════════════════╗
+║FILES & LOCATION
+╚════════════════╝
+${document.querySelector("#files-location-field").value}
+
+╔═══════════════╗
+║LAB REPLICATION
+╚═══════════════╝
+${document.querySelector("#lab-replication-field").value}
+`;
+
+
+      outputField.value = outputString;
+    }
+
+    function formatText(findingsString) {
+      var lines = findingsString.split("\n");
+      var formattedLines = [];
+      for (var i = 0; i < lines.length; i++) {
+        if (lines[i].startsWith("- ")) {
+          const newline = lines[i].replace(/- /gi, "        • "); // bullet points
+          // const newline1 = lines[i].replace(/->/gi, "➞");           // arrows
+          formattedLines.push(newline + "\n");
+        } else {
+          formattedLines.push(lines[i] + "\n");
+        }
+      }
+      let formattedFindings = formattedLines.join("");
+      return formattedFindings;
+    }
+
+
+    // Copy to clipboard
+    async function copyToClipboard() {
+      var outputText = document.querySelector("#output-field").value;
+      try {
+        await navigator.clipboard.writeText(outputText);
+        console.log("copied text");
+      } catch (err) {
+        console.error("Failed to copy");
+      }
+    }
+  </script>
+
+</body>
+
+</html>

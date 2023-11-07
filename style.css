@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Gudea:wght@400;700&family=Inter&display=swap');
+
+
+* {
+    box-sizing: border-box;
+    /* overflow: auto; */
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.feedback {
+    position: absolute;
+    top: 40px;
+    left: 45px;
+}
+
+.feedback:hover {
+    cursor: pointer;
+}
+
+.download {
+    position: absolute;
+    top: 40px;
+    left: 90px;
+}
+
+.download:hover {
+    cursor: pointer;
+}
+
+.dark-mode-toggle {
+    position: absolute;
+    top: 40px;
+    right: 45px;
+}
+
+.dark-mode-toggle:hover {
+    cursor: pointer;
+}
+
+.material-symbols-outlined {
+    color: #010101;
+}
+
+
+.nav {
+    text-align: center;
+}
+
+.btn {
+    margin: 30px 8px;
+    width: 190px;
+    height: 35px;
+    border: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+.generate-btn {
+    margin: 30px 10px;
+    float: right;
+}
+
+.dark-btn {
+    background-color: #D9D9D9;
+}
+
+.btn:hover {
+    background-color: rgba(213, 26, 94, 0.2);
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.main-section {
+    /* margin: 0 115px; */
+    margin: 0 auto;
+    overflow: auto;
+    width: 90%;
+    max-width: 2000px;
+}
+
+.section {
+    /* width: 800px; */
+    width: 49%;
+    background-color: #cccccc;
+    padding: 10px 100px;
+    overflow: hidden;
+    display: inline-block;
+    height: 95vh;
+}
+
+.input-section {
+    float: left;
+    /* overflow: auto; */
+}
+
+.output-section {
+    float: right;
+    text-align: center;
+}
+
+.section-header {
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+.field-container {
+    margin: 15px 0;
+}
+
+.textarea-container label {
+    margin-bottom: 10px;
+    overflow: auto;
+}
+
+label {
+    font-size: 14px;
+    font-weight: 400;
+    width: 30%;
+}
+
+input {
+    float: right;
+    width: 360px;
+    height: 24px;
+    padding: 0 5px;
+    border: none;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea {
+    border: none;
+    width: 50%;
+    max-width: 100%;
+    min-width: 100%;
+    padding: 5px;
+}
+
+textarea:focus {
+    outline: none;
+}
+.inline-ta {
+    width: 360px;
+    min-width: 360px;
+    max-width: 360px;
+    float: right;
+    background-color: white;
+}
+
+.output-ta {
+    margin-bottom: 20px;
+}
+
+.sub1 {
+    overflow: auto;
+}
+
+.sub2 {
+    margin: 20px 0;
+}
+
+.sub2 label {
+    display: block;
+}
+
+.sub3 {
+    overflow: auto;
+}
+
+.hidden {
+    display: none;
+}
+
+@media only screen and (max-width: 1645px) {
+    .section {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 30px;
+    }
+}

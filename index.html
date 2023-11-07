@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <link rel="icon" type="image/x-icon" href="./favicon_white.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="darkmode.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <title>SR Notes</title>
+
+</head>
+
+<body>
+  <!-- feedback -->
+  <div class="feedback" title="Submit feedback">
+    <a href="https://github.com/tjroca/sr_notes/issues" target="_blank"><span class="material-symbols-outlined">speaker_notes</span></a>
+  </div>
+  <div class="download" title="Download local version">
+    <a href="https://raw.githubusercontent.com/tjroca/sr_notes_legacy/main/sr_notes_legacy-local.html" target="_blank"><span class="material-symbols-outlined">download</span></a>
+  </div>
+  <!-- dark mode toggle -->
+  <div class="dark-mode-toggle" title="Toggle dark mode">
+    <span class="material-symbols-outlined">dark_mode</span>
+  </div>
+
+  <div class="nav">
+    <button class="btn" id="first-session-btn">First Session</button>
+    <button class="btn" id="followup-session-btn">Follow up Session</button>
+    <button class="btn" id="escalation-template-btn">Escalation Template</button>
+  </div>
+
+  <div class="main-section">
+
+    <!-- input section -->
+    <!--  -->
+    <div id="input-section" class="input-section first-session-section section">
+
+      <!-- First session section -->
+      <div id="first-session-sub-container" class="input-section-sub-container sub1">
+        <h3 class="input-header section-header">First Remote Session</h3>
+        <div class="sub1">
+          <div class="field-container">
+            <label>SR Number</label>
+            <input id="frs-sr-number-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Customer Name</label>
+            <input id="frs-customer-name-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Contact Number</label>
+            <input id="frs-contact-number-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Business Impact</label>
+            <input id="frs-business-impact-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Environment & Version</label>
+            <textarea id="frs-environment-field" class="inline-ta" rows="2" required></textarea>
+          </div>
+        </div>
+        <div class="sub2">
+          <div class="field-container textarea-container">
+            <label class="summaryofissue-ta">Summary of Issue</label>
+            <textarea id="frs-issue-summary-field" rows="5" required></textarea>
+          </div>
+          <div class="field-container textarea-container">
+            <label class="findings-ta">Findings</label>
+            <textarea id="frs-findings-field" rows="14" required></textarea>
+          </div>
+        </div>
+        <div class="sub3">
+          <div class="field-container">
+            <label>Files & Location</label>
+            <input id="frs-files-location-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Next Steps</label>
+            <textarea id="frs-next-steps-field" class="inline-ta" required></textarea>
+          </div>
+        </div>
+        <button id="gen-first-session-notes" class="btn generate-btn dark-btn">Generate Notes</button>
+        <button id="frs-gen-email" class="btn generate-btn dark-btn gen-email">Generate Email</button>
+      </div>
+
+      <!-- Follow up session section-->
+      <div id="followup-session-sub-container" class="input-section-sub-container hidden">
+        <h3 class="input-header section-header">Follow up Session</h3>
+
+        <div class="sub1">
+          <div class="field-container">
+            <label>SR Number</label>
+            <input id="fo-sr-number-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Customer Name</label>
+            <input id="fo-customer-name-field" type="text" required>
+          </div>
+        </div>
+
+        <div class="sub2">
+          <div class="field-container textarea-container">
+            <label class="summaryofissue-ta">Summary of Issue</label>
+            <textarea id="fo-issue-summary-field" rows="5" required></textarea>
+          </div>
+          <div class="field-container textarea-container">
+            <label class="findings-ta">Findings</label>
+            <textarea id="fo-findings-field" rows="14" required></textarea>
+          </div>
+        </div>
+
+        <div class="sub3">
+          <div class="field-container">
+            <label>Files & Location</label>
+            <input id="fo-files-location-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Next Steps</label>
+            <textarea id="fo-next-steps-field" class="inline-ta" required></textarea>
+          </div>
+        </div>
+        <button id="gen-followup-session-notes" class="btn generate-btn dark-btn">Generate Notes</button>
+        <button id="fo-gen-email" class="btn generate-btn dark-btn gen-email">Generate Email</button>
+      </div>
+
+
+      <!-- Escalation template section -->
+      <div id="escalation-template-sub-container" class="input-section-sub-container hidden">
+        <h3 class="input-header section-header">Escalation Template</h3>
+        <div class="sub1">
+          <div class="field-container">
+            <label>SR Number</label>
+            <input id="sr-number-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Customer Name</label>
+            <input id="customer-name-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Business Impact</label>
+            <input id="business-impact-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Environment & Version</label>
+            <textarea id="environment-field" class="inline-ta" required></textarea>
+          </div>
+        </div>
+        <div class="sub2">
+          <div class="field-container textarea-container">
+            <label class="summaryofissue-ta">Summary of Issue</label>
+            <textarea id="esc-issue-summary-field" rows="5" required></textarea>
+          </div>
+          <div class="field-container textarea-container">
+            <label class="findings-ta">Findings</label>
+            <textarea id="esc-findings-field" rows="14" required></textarea>
+          </div>
+        </div>
+        <div class="sub3">
+          <div class="field-container">
+            <label>Files & Location</label>
+            <input id="files-location-field" type="text" required>
+          </div>
+          <div class="field-container">
+            <label>Lab Replication</label>
+            <textarea id="lab-replication-field" class="inline-ta" rows="1" required></textarea>
+          </div>
+        </div>
+        <button id="gen-escalation-notes" class="btn generate-btn dark-btn">Generate Notes</button>
+      </div>
+
+
+    </div>
+
+
+
+    <!-- output section -->
+    <div class="output-section section">
+      <h3 class="output-header section-header">Output</h3>
+      <textarea id="output-field" class="output-ta" rows="40" readonly></textarea>
+      <button id="copy-btn" class="btn dark-btn" onclick="copyToClipboard()">Copy to Clipboard</button>
+    </div>
+
+  </div>
+
+
+
+
+  <script src="script.js"></script>
+  <!-- <script src="darkmode.js"></script> -->
+
+  <!-- Google  -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4D011XVH2W"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-4D011XVH2W');
+  </script>
+</body>
+
+</html>

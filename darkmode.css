@@ -1,0 +1,53 @@
+/* 
+body color: #181a1b
+section color: #202324
+input/textarea color: #3b3b3b
+light button color: #6b6b6b
+dark button color: #2d3133
+letter color: #f0f0f0
+*/
+
+.material-symbols-outlined {
+    color: #f0f0f0 !important;
+}
+
+label {
+    color: #f0f0f0 !important;
+}
+
+body {
+    background: #181a1b !important;
+}
+
+h3 {
+    color: #f0f0f0;
+}
+
+.btn {
+    color: #f0f0f0;
+    background-color: #6b6b6b !important;
+}
+
+.btn:hover {
+    background-color: #bd006e !important;
+}
+
+.btn:active {
+    color: #000000;
+    border: 1px solid #f0f0f0;
+}
+
+.generate-btn,
+.dark-btn {
+    background-color: #2d3133 !important;
+}
+
+input,
+textarea {
+    background-color: #3b3b3b !important;
+    color: #f0f0f0;
+}
+
+.section {
+    background-color: #202324;
+}
