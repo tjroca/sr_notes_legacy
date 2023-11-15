@@ -99,27 +99,27 @@ ${document.querySelector("#frs-customer-name-field").value}
 ╚══════════════╝
 ${document.querySelector("#frs-contact-number-field").value}
 
-╔═════════════════════╗
+╔═══════════════════╗
 ║ENVIRONMENT & VERSION
-╚═════════════════════╝
+╚═══════════════════╝
 ${document.querySelector("#frs-environment-field").value}
 
-╔═══════════════╗
+╔══════════════╗
 ║BUSINESS IMPACT
-╚═══════════════╝
+╚══════════════╝
 ${document.querySelector("#frs-business-impact-field").value}
 
-╔════════════════╗
+╔═══════════════╗
 ║SUMMARY OF ISSUE
-╚════════════════╝
+╚═══════════════╝
 ${formattedIssueSummary}
 ╔════════╗
 ║FINDINGS
 ╚════════╝
 ${formattedFindings}
-╔════════════════╗
+╔══════════════╗
 ║FILES & LOCATION
-╚════════════════╝
+╚══════════════╝
 ${document.querySelector("#frs-files-location-field").value}
 
 ╔══════════╗
@@ -154,17 +154,17 @@ ${document.querySelector("#fo-sr-number-field").value}
 ╚═════════════╝
 ${document.querySelector("#fo-customer-name-field").value}
 
-╔════════════════╗
+╔══════════════╗
 ║SUMMARY OF ISSUE
-╚════════════════╝
+╚══════════════╝
 ${formattedIssueSummary}
 ╔════════╗
 ║FINDINGS
 ╚════════╝
 ${formattedFindings}
-╔════════════════╗
+╔═════════════╗
 ║FILES & LOCATION
-╚════════════════╝
+╚═════════════╝
 ${document.querySelector("#fo-files-location-field").value}
 
 ╔══════════╗
@@ -195,9 +195,9 @@ ${document.querySelector("#sr-number-field").value}
 ╚═════════════╝
 ${document.querySelector("#customer-name-field").value}
 
-╔═════════════════════╗
+╔═══════════════════╗
 ║ENVIRONMENT & VERSION
-╚═════════════════════╝
+╚═══════════════════╝
 ${document.querySelector("#environment-field").value}
 
 ╔═══════════════╗
@@ -205,22 +205,22 @@ ${document.querySelector("#environment-field").value}
 ╚═══════════════╝
 ${document.querySelector("#business-impact-field").value}
 
-╔════════════════╗
+╔═══════════════╗
 ║SUMMARY OF ISSUE
-╚════════════════╝
+╚═══════════════╝
 ${formattedIssueSummary}
 ╔════════╗
 ║FINDINGS
 ╚════════╝
 ${formattedFindings}
-╔════════════════╗
+╔══════════════╗
 ║FILES & LOCATION
-╚════════════════╝
+╚══════════════╝
 ${document.querySelector("#files-location-field").value}
 
-╔═══════════════╗
+╔══════════════╗
 ║LAB REPLICATION
-╚═══════════════╝
+╚══════════════╝
 ${document.querySelector("#lab-replication-field").value}
 `;
 
@@ -258,5 +258,8 @@ async function copyToClipboard() {
 
 // Download local version
 function downloadLocal() {
-
+    var link = document.createElement("a");
+    link.download = "SR Notes.html";
+    link.href = "https://raw.githubusercontent.com/tjroca/sr_notes/main/sr_notes-local.html";
+    link.click();
 }
