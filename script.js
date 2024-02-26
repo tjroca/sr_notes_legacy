@@ -70,6 +70,33 @@ document.querySelector("#fo-gen-email").onclick = function() {
     outputField.value = outputString;
 }
 
+// Clear first remote session
+document.querySelector("#frs-clear").onclick = function() {
+    let fields = document.getElementsByClassName("frs");
+    for (let i = 0; i < fields.length; i++) {
+        fields[i].value = "";
+    }
+    document.querySelector("#output-field").value = "";
+}
+
+// Clear follow up remote session
+document.querySelector("#fo-clear").onclick = function() {
+    let fields = document.getElementsByClassName("fo");
+    for (let i = 0; i < fields.length; i++) {
+        fields[i].value = "";
+    }
+    document.querySelector("#output-field").value = "";
+}
+
+// Clear escalation
+document.querySelector("#escalation-clear").onclick = function() {
+    let fields = document.getElementsByClassName("esc");
+    for (let i = 0; i < fields.length; i++) {
+        fields[i].value = "";
+    }
+    document.querySelector("#output-field").value = "";
+}
+
 
 let HEADER_START = "❰❰";
 let HEADER_END = "❱❱";

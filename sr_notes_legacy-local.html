@@ -105,6 +105,11 @@
       cursor: pointer;
     }
 
+    .clear-btn {
+      float: left;
+      margin-left: 0;
+    }
+
     .main-section {
       /* margin: 0 115px; */
       margin: 0 auto;
@@ -316,47 +321,48 @@ letter color: #f0f0f0
         <div class="sub1">
           <div class="field-container">
             <label>SR Number</label>
-            <input id="frs-sr-number-field" type="text" required>
+            <input id="frs-sr-number-field" class="frs" type="text" required>
           </div>
           <div class="field-container">
             <label>Customer Name</label>
-            <input id="frs-customer-name-field" type="text" required>
+            <input id="frs-customer-name-field" class="frs" type="text" required>
           </div>
           <div class="field-container">
             <label>Contact Number</label>
-            <input id="frs-contact-number-field" type="text" required>
+            <input id="frs-contact-number-field" class="frs" type="text" required>
           </div>
           <div class="field-container">
             <label>Business Impact</label>
-            <input id="frs-business-impact-field" type="text" required>
+            <input id="frs-business-impact-field" class="frs" type="text" required>
           </div>
           <div class="field-container">
             <label>Environment & Version</label>
-            <textarea id="frs-environment-field" class="inline-ta" rows="2" required></textarea>
+            <textarea id="frs-environment-field" class="inline-ta frs" rows="2" required></textarea>
           </div>
         </div>
         <div class="sub2">
           <div class="field-container textarea-container">
             <label class="summaryofissue-ta">Summary of Issue</label>
-            <textarea id="frs-issue-summary-field" rows="5" required></textarea>
+            <textarea id="frs-issue-summary-field" class="frs" rows="5" required></textarea>
           </div>
           <div class="field-container textarea-container">
             <label class="findings-ta">Findings</label>
-            <textarea id="frs-findings-field" rows="14" required></textarea>
+            <textarea id="frs-findings-field" class="frs" rows="14" required></textarea>
           </div>
         </div>
         <div class="sub3">
           <div class="field-container">
             <label>Files & Location</label>
-            <input id="frs-files-location-field" type="text" required>
+            <input id="frs-files-location-field" class="frs" type="text" required>
           </div>
           <div class="field-container">
             <label>Next Steps</label>
-            <textarea id="frs-next-steps-field" class="inline-ta" required></textarea>
+            <textarea id="frs-next-steps-field" class="inline-ta frs" required></textarea>
           </div>
         </div>
         <button id="gen-first-session-notes" class="btn generate-btn dark-btn">Generate Notes</button>
         <button id="frs-gen-email" class="btn generate-btn dark-btn gen-email">Generate Email</button>
+        <button id="frs-clear" class="btn generate-btn dark-btn clear-btn">Clear</button>
       </div>
 
       <!-- Follow up session section-->
@@ -366,37 +372,38 @@ letter color: #f0f0f0
         <div class="sub1">
           <div class="field-container">
             <label>SR Number</label>
-            <input id="fo-sr-number-field" type="text" required>
+            <input id="fo-sr-number-field" class="fo" type="text" required>
           </div>
           <div class="field-container">
             <label>Customer Name</label>
-            <input id="fo-customer-name-field" type="text" required>
+            <input id="fo-customer-name-field" class="fo" type="text" required>
           </div>
         </div>
 
         <div class="sub2">
           <div class="field-container textarea-container">
             <label class="summaryofissue-ta">Summary of Issue</label>
-            <textarea id="fo-issue-summary-field" rows="5" required></textarea>
+            <textarea id="fo-issue-summary-field" class="fo" rows="5" required></textarea>
           </div>
           <div class="field-container textarea-container">
             <label class="findings-ta">Findings</label>
-            <textarea id="fo-findings-field" rows="14" required></textarea>
+            <textarea id="fo-findings-field" class="fo" rows="14" required></textarea>
           </div>
         </div>
 
         <div class="sub3">
           <div class="field-container">
             <label>Files & Location</label>
-            <input id="fo-files-location-field" type="text" required>
+            <input id="fo-files-location-field" class="fo" type="text" required>
           </div>
           <div class="field-container">
             <label>Next Steps</label>
-            <textarea id="fo-next-steps-field" class="inline-ta" required></textarea>
+            <textarea id="fo-next-steps-field" class="inline-ta fo" required></textarea>
           </div>
         </div>
         <button id="gen-followup-session-notes" class="btn generate-btn dark-btn">Generate Notes</button>
         <button id="fo-gen-email" class="btn generate-btn dark-btn gen-email">Generate Email</button>
+        <button id="fo-clear" class="btn generate-btn dark-btn clear-btn">Clear</button>
       </div>
 
 
@@ -406,42 +413,43 @@ letter color: #f0f0f0
         <div class="sub1">
           <div class="field-container">
             <label>SR Number</label>
-            <input id="sr-number-field" type="text" required>
+            <input id="sr-number-field" class="esc" type="text" required>
           </div>
           <div class="field-container">
             <label>Customer Name</label>
-            <input id="customer-name-field" type="text" required>
+            <input id="customer-name-field" class="esc" type="text" required>
           </div>
           <div class="field-container">
             <label>Business Impact</label>
-            <input id="business-impact-field" type="text" required>
+            <input id="business-impact-field" class="esc" type="text" required>
           </div>
           <div class="field-container">
             <label>Environment & Version</label>
-            <textarea id="environment-field" class="inline-ta" required></textarea>
+            <textarea id="environment-field" class="inline-ta esc" required></textarea>
           </div>
         </div>
         <div class="sub2">
           <div class="field-container textarea-container">
             <label class="summaryofissue-ta">Summary of Issue</label>
-            <textarea id="esc-issue-summary-field" rows="5" required></textarea>
+            <textarea id="esc-issue-summary-field" class="esc" rows="5" required></textarea>
           </div>
           <div class="field-container textarea-container">
             <label class="findings-ta">Findings</label>
-            <textarea id="esc-findings-field" rows="14" required></textarea>
+            <textarea id="esc-findings-field" class="esc" rows="14" required></textarea>
           </div>
         </div>
         <div class="sub3">
           <div class="field-container">
             <label>Files & Location</label>
-            <input id="files-location-field" type="text" required>
+            <input id="files-location-field" class="esc" type="text" required>
           </div>
           <div class="field-container">
             <label>Lab Replication</label>
-            <textarea id="lab-replication-field" class="inline-ta" rows="1" required></textarea>
+            <textarea id="lab-replication-field" class="inline-ta esc" rows="1" required></textarea>
           </div>
         </div>
         <button id="gen-escalation-notes" class="btn generate-btn dark-btn">Generate Notes</button>
+        <button id="escalation-clear" class="btn generate-btn dark-btn clear-btn">Clear</button>
       </div>
 
 
@@ -461,7 +469,7 @@ letter color: #f0f0f0
 
 
 
-  <script src="script.js"></script>
+  <!-- <script src="script.js"></script> -->
   <!-- <script src="darkmode.js"></script> -->
 
 
@@ -524,6 +532,35 @@ letter color: #f0f0f0
     }
 
 
+    // Clear first remote session
+    document.querySelector("#frs-clear").onclick = function() {
+      let fields = document.getElementsByClassName("frs");
+      for (let i = 0; i < fields.length; i++) {
+          fields[i].value = "";
+      }
+      document.querySelector("#output-field").value = "";
+    }
+
+    // Clear follow up remote session
+    document.querySelector("#fo-clear").onclick = function() {
+      let fields = document.getElementsByClassName("fo");
+      for (let i = 0; i < fields.length; i++) {
+          fields[i].value = "";
+      }
+      document.querySelector("#output-field").value = "";
+    }
+
+    // Clear escalation
+    document.querySelector("#escalation-clear").onclick = function() {
+      let fields = document.getElementsByClassName("esc");
+      for (let i = 0; i < fields.length; i++) {
+          fields[i].value = "";
+      }
+      document.querySelector("#output-field").value = "";
+    }
+
+
+
     let HEADER_START = "❰❰";
     let HEADER_END = "❱❱";
 
@@ -535,7 +572,7 @@ letter color: #f0f0f0
       let frsFindingsField = document.querySelector("#frs-findings-field").value;
       const formattedFindings = formatText(frsFindingsField);
 
-      const outputString = `❰❰ 𝗥𝗘𝗠𝗢𝗧𝗘 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗡𝗢𝗧𝗘𝗦 ❱❱
+      const outputString = `# REMOTE SESSION NOTES #
 
 ╔═════════╗
 ║SR NUMBER
@@ -595,7 +632,7 @@ ${document.querySelector("#frs-next-steps-field").value}
       let foFindingsField = document.querySelector("#fo-findings-field").value;
       const formattedFindings = formatText(foFindingsField);
 
-      const outputString = `❰❰ 𝗥𝗘𝗠𝗢𝗧𝗘 𝗦𝗘𝗦𝗦𝗜𝗢𝗡 𝗡𝗢𝗧𝗘𝗦 ❱❱    
+      const outputString = `# REMOTE SESSION NOTES #   
 
 ╔═════════╗
 ║SR NUMBER
@@ -636,7 +673,7 @@ ${document.querySelector("#fo-next-steps-field").value}`;
       let escFindingsField = document.querySelector("#esc-findings-field").value;
       const formattedFindings = formatText(escFindingsField);
 
-      const outputString = `❰❰ 𝗘𝗦𝗖𝗔𝗟𝗔𝗧𝗜𝗢𝗡 𝗡𝗢𝗧𝗘𝗦 ❱❱ 
+      const outputString = `# ESCALATION NOTES #
 
 ╔═════════╗
 ║SR NUMBER

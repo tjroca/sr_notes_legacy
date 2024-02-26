@@ -73,6 +73,11 @@
     cursor: pointer;
 }
 
+.clear-btn {
+    float: left;
+    margin-left: 0;
+}
+
 .main-section {
     /* margin: 0 115px; */
     margin: 0 auto;
