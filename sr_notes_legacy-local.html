@@ -445,7 +445,7 @@ letter color: #f0f0f0
           </div>
           <div class="field-container">
             <label>Lab Replication</label>
-            <textarea id="lab-replication-field" class="inline-ta esc" rows="1" required></textarea>
+            <textarea id="lab-replication-field" class="inline-ta esc" rows="2" required></textarea>
           </div>
         </div>
         <button id="gen-escalation-notes" class="btn generate-btn dark-btn">Generate Notes</button>
@@ -536,7 +536,7 @@ letter color: #f0f0f0
     document.querySelector("#frs-clear").onclick = function() {
       let fields = document.getElementsByClassName("frs");
       for (let i = 0; i < fields.length; i++) {
-          fields[i].value = "";
+        fields[i].value = "";
       }
       document.querySelector("#output-field").value = "";
     }
@@ -545,7 +545,7 @@ letter color: #f0f0f0
     document.querySelector("#fo-clear").onclick = function() {
       let fields = document.getElementsByClassName("fo");
       for (let i = 0; i < fields.length; i++) {
-          fields[i].value = "";
+        fields[i].value = "";
       }
       document.querySelector("#output-field").value = "";
     }
@@ -554,7 +554,7 @@ letter color: #f0f0f0
     document.querySelector("#escalation-clear").onclick = function() {
       let fields = document.getElementsByClassName("esc");
       for (let i = 0; i < fields.length; i++) {
-          fields[i].value = "";
+        fields[i].value = "";
       }
       document.querySelector("#output-field").value = "";
     }
