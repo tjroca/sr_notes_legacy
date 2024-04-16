@@ -266,7 +266,7 @@ function formatText(findingsString) {
     var formattedLines = [];
     for (var i = 0; i < lines.length; i++) {
         if (lines[i].startsWith("- ")) {
-            const newline = lines[i].replace(/- /gi, "        • ");          // bullet points
+            const newline = lines[i].replace(/- /i, "        • ");          // bullet points
             // const newline1 = lines[i].replace(/->/gi, "➞");           // arrows
             formattedLines.push(newline + "\n");
         }else {
